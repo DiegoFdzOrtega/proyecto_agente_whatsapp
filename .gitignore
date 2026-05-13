@@ -1,29 +1,23 @@
-# Dependencias (Nunca se suben)
+# Dependencias (Muy pesadas)
 node_modules/
 
-# Archivos de configuración de paquetes (Solo ignoramos el lock si quieres, 
-# aunque normalmente se recomienda subir el package-lock.json. 
-# Lo que JAMÁS se sube es node_modules)
-dist/
-build/
-
-# Variables de entorno (Aquí irán tus API Keys de OpenAI/Claude)
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Archivos de sesión de WhatsApp (Si usas whatsapp-web.js o similar)
+# Autenticación de WhatsApp (¡CRÍTICO! Contiene tu sesión activa)
 .wwebjs_auth/
 .wwebjs_cache/
 auth_info_multi/
+session.json
 
-# Sistema
+# Variables de entorno (Donde irán tus API Keys)
+.env
+.env.local
+
+# Logs y Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Archivos del sistema
 .DS_Store
 Thumbs.db
